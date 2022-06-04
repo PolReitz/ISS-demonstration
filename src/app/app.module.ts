@@ -1,16 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
-
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-=======
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent } from './app.component';
@@ -26,7 +15,6 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
   imports: [
     BrowserModule,
     FormsModule
->>>>>>> 3b80543a624fff28d4c87c35bdf33844876faac2
   ],
   providers: [],
   bootstrap: [AppComponent]
