@@ -5,11 +5,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + 'build'));
+app.use(express.static(__dirname + '/dist/angular-issdemo'));
 app.get('/*', function(req,res) {
-  const index = path.join(__dirname, 'build', 'index.html');
-  res.sendFile(index);
-  //res.sendFile(__dirname+ '/build/index.html' );//+ 'src/index.html');
+  const fullPath = path.join(__dirname +'/dist/music-app/');
+  console.log(" Fetching from.." + fullPath);
+    res.sendFile(fullPath);
 });
 
 // Start the app by listening on the default Heroku port
