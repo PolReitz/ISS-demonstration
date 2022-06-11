@@ -3,11 +3,9 @@
   "version": "13.3.11",
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod",
     "heroku-postbuild": "ng build --configuration=production",
     "start": "node server.js"
   },
