@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 // Serve static files
-app.use(express.static(__dirname + '/dist/angular-issdemo'));$
+app.use(express.static(__dirname + '/dist/angular-issdemo'));
 
 // default Heroku port
 app.listen(process.env.PORT || 8080);
