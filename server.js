@@ -6,11 +6,11 @@ const app = express();
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + 'build'));
-
+console.log(__dirname+ '/src/index.html' );
 app.get('/*', function(req,res) {
-  /*const index = path.join(__dirname, 'build', 'index.html');
-  res.sendFile(index);*/
-  res.sendFile(__dirname + '/src/index.html');
+  const index = path.join(__dirname, 'build', 'index.html');
+  res.sendFile(index);
+  //res.sendFile(__dirname+ '/build/index.html' );//+ 'src/index.html');
 });
 
 // Start the app by listening on the default Heroku port
