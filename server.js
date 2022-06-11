@@ -8,9 +8,9 @@ const app = express();
 app.use(express.static(__dirname + 'build'));
 
 app.get('/*', function(req,res) {
-  /*const index = path.join(__dirname, 'dist', 'index.html');
+  /*const index = path.join(__dirname, 'build', 'index.html');
   res.sendFile(index);*/
-  res.sendFile('index.html');
+  res.sendFile(__dirname + '/src/index.html');
 });
 
 // Start the app by listening on the default Heroku port
