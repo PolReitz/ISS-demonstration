@@ -11,6 +11,7 @@
     "build": "ng build",
     "test": "ng test",
     "postinstall": "ng build --aot -prod"
+
   },
   "private": true,
   "dependencies": {
