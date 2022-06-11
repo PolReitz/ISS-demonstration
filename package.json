@@ -4,10 +4,10 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
-    "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client" 
+    "client": "npm start --prefix angular-issdemo",
+    "clientinstall": "npm install --prefix angular-issdemo",
+    "dev": "concurrently \"npm run server\" \"npm run angular-issdemo\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix angular-issdemo && npm run build --prefix angular-issdemo" 
   },
   "private": true,
   "dependencies": {
