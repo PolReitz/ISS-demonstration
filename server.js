@@ -1,14 +1,30 @@
-const path = require('path');
+//Install express server
 const express = require('express');
+const path = require('path');
+
 const app = express();
 
-// Serve static files
-app.use(express.static(__dirname + '/dist/iss-demonstration/'));
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/app/dist/angular_issdemo'));
+//app.use(express.static(path.join(__dirname, 'dist','angular-issdemo')));
 
-// Send all requests to index.html
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/dist/iss-demonstration/index.html'));
+app.get('/*', function(req,res) {
+  res.sendFile(path.join(__dirname+'/app/dist/angular_issdemo/index.html'));
+  //res.sendFile(path.join(__dirname,'dist','angular-issdemo','index.html'));
 });
 
-// default Heroku port
-app.listen(process.env.PORT || 5000);
+// Deployment
+/*if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+  app.get("*", (req, res) =>
+    // res.sendFile(path.resolve(__dirname, "../client", "public", "index.html"))
+    res.sendFile(path.resolve(__dirname, "../client/build/index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API IS RUNNING.");
+  });
+}*/
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
